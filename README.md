@@ -44,20 +44,6 @@ Conteneur MongoDB
 
 docker run -d --name todo-mongo -p 27017:27017 -v mongo-data:/data/db mongo:8.2.2
 
-______________________________________________________________________________________________________
-
-Conteneur BACK-END
-
-docker run -d --name todo-backend -p 5000:5000 --env MONGO_URI=mongodb://todo-mongo:27017/todo_db --link todo-mongo todo-backend
-
-___________________________________________________________________________________________________________
-
-Conteneur FRONT-END
-
-docker run -d --name todo-frontend -p 4200:80 todo-frontend
-
-
-To Launch the application just launch
 
 
 docker run -d --name todo-frontend -p 4200:80 todo-frontend
